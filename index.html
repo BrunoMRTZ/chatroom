@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,16 +8,17 @@
     <title>Chatroom Example</title>
   </head>
   <body>
+    botat
     <div class="chat-container"></div>
     <script src="./dist/Chatroom.js"></script>
     <script type="text/javascript">
 window.chatroom = new window.Chatroom({
   title: "Chat with a bot",
   container: document.querySelector(".chat-container"),
-  welcomeMessage: "Nice to meet you.",
+  welcomeMessage: "Olá, sou Cacia, do Balcão Digital.",
   host: "http://localhost:5005",
-  speechRecognition: "en-US",
-  voiceLang: "en-US"
+  speechRecognition: "pt-BR",
+  voiceLang: "pt-BR"
 });
 window.chatroom.openChat();
 </script>
