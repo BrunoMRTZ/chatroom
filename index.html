@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./src/Chatroom.css">
-    <link rel="stylesheet" type="text/css" href="./index.css">
-    <title>Chatroom Example</title>
-  </head>
-  <body>
-    <div class="chat-container"></div>
-    <script src="./src/Chatroom.js"></script>
-    <script type="text/javascript">
-window.chatroom = new window.Chatroom({
-  title: "Chat with a bot",
-  container: document.querySelector(".chat-container"),
-  welcomeMessage: "Nice to meet you.",
-  host: "http://104.209.210.48:80",
-  speechRecognition: "en-US",
-  voiceLang: "en-US"
-});
-window.chatroom.openChat();
-</script>
+ <head>
+  <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+</head>
+<body>
+  <div class="chat-container"></div>
+
+  <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>
+  <script type="text/javascript">
+    var chatroom = new window.Chatroom({
+      host: "http://localhost:5005",
+      title: "Chat with Mike",
+      container: document.querySelector(".chat-container"),
+      welcomeMessage: "Hi, I am Mike. How may I help you?",
+      speechRecognition: "en-US",
+      voiceLang: "en-US"
+    });
+    chatroom.openChat();
+  </script>
+
 
 <div id="webchat"/>
 <script src="https://storage.googleapis.com/mrbot-cdn/webchat-0.5.8.js"></script>
