@@ -15,7 +15,7 @@
 window.chatroom = new window.Chatroom({
   title: "Chat with a bot",
   container: document.querySelector(".chat-container"),
-  welcomeMessage: "Olá, sou Cacia, do Balcão Digital.",
+  welcomeMessage: "Olá, sou CÁCIA, do Balcão Digital.",
   host: "http://104.209.210.48:80",
   speechRecognition: "pt-BR",
   voiceLang: "pt-BR"
@@ -33,15 +33,15 @@ window.chatroom.openChat();
     customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
     socketUrl: "http://104.209.210.48:80",
     socketPath: "/socket.io/",
-    title: "CACIA bot",
-    subtitle: "Balcão Digital,
-    inputTextFieldHint: "diga olá, para começar...",
+    title: "CÁCIA bot",
+    subtitle: "Balcão Digital",
+    inputTextFieldHint: "Diga olá, para começar...",
     connectingText: "Esperando pelo servidor...",
     hideWhenNotConnected: true,
     fullScreenMode: false,
     showFullScreenButton: false,
-    profileAvatar: "http://104.209.210.48:80/botat/images/caciabt.png",
-    openLauncherImage: 'http://104.209.210.48:80/botat/images/caciabt.png',
+    profileAvatar: "http://104.209.210.48:8080/botat/images/caciabt.png",
+    openLauncherImage: 'http://104.209.210.48:8080/botat/images/caciabt.png',
     closeLauncherImage: 'myCustomCloseImage.png',
     displayUnreadCount: true, // --> [view](./assets/unread_count_pastille.png)
     showMessageDate: false,
