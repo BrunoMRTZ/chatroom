@@ -8,11 +8,11 @@ $linkColor: #3498db;
 
 .chatroom {
   width: 300px;
-  height: 600px;
+  height: 300px;
   color: $textColor;
   max-height: 90vh;
   background-color: $backgroundColor;
-  border-radius: 3px;
+  border-radius: 6px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   letter-spacing: normal;
@@ -25,7 +25,7 @@ $linkColor: #3498db;
   }
 
   &.closed {
-    height: 40px;
+    height: 80px;
   }
 
   h3 {
