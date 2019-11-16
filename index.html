@@ -29,6 +29,42 @@ window.chatroom = new window.Chatroom({
 window.chatroom.openChat();
 </script>
 
+  
+  
+  
+<div id="webchat"/>
+<script src="https://storage.googleapis.com/mrbot-cdn/webchat-0.5.8.js"></script>
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+    interval: 1000, // 1000 ms between each message
+    customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://104.209.210.48:80",
+    socketPath: "/socket.io/",
+    title: "CÁCIA bot",
+    subtitle: "Balcão Digital",
+    inputTextFieldHint: "Diga olá, para começar...",
+    connectingText: "Esperando pelo servidor...",
+    hideWhenNotConnected: true,
+    fullScreenMode: false,
+    showFullScreenButton: false,
+    profileAvatar: "http://104.209.210.48:8080/botat/images/caciabt2.png",
+    openLauncherImage: 'http://104.209.210.48:8080/botat/images/caciabt.png',
+    closeLauncherImage: 'myCustomCloseImage.png',
+    displayUnreadCount: true, // --> [view](./assets/unread_count_pastille.png)
+    showMessageDate: false,
+    params: {
+      images: {
+        dims: {
+          width: 300,
+          height: 200,
+        }
+      },
+      storage: "local"
+    },
+  })
+</script>
     
 
     
