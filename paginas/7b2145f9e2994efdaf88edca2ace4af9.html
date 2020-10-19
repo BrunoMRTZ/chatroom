@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+      <title>Rastreamento de Objetos</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta name="description" content="Rastreamento de Objetos dos Correios">
+      <meta name="author" content="Bruno Martinez">
+      <style>
+            /*body {font-family:monospace; background-color:LightGray; border:2px solid Blue;}*/
+            h1   {color: black;}
+            h2   {color: blue;background-color:LightGray; text-align:center;}
+            p    {color:blue ;}
+            blockquote {background-color:LightGray; color:blue;}
+    
+           
+          
+          * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: LightGray;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: silver;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media  {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+          
+      </style>
+    
+        
+    </head>
+    
+    <body>  
+        <p style="background-color:gold;">
+             <img src="https://caciax.eastus2.cloudapp.azure.com/botat/images/correiosLogo.jpeg"
+            alt="Cacia Bot" width="50" height="50">
+             <sup> <b>CACIA -</b>  Central de atendimento Correios ( com IA)  </sup><br>
+        </p>   
+        <h1 style="text-align:center;" >
+        <img src="https://caciax.eastus2.cloudapp.azure.com/botat/images/rastreio_pacote.gif"
+            alt="Cacia Bot" width="50" height="50">
+            Calcula Prazo de entrega 
+        </h1>
+   
+    <p> <sub> Protocolo: 
+    7b2145f9e2994efdaf88edca2ace4af9<br> Contato: Anônimo  </sub></p> <h2>4014</h2> <h2 style="color:green ;" > <img src="https://caciax.eastus2.cloudapp.azure.com/botat/images/fast-delivery.png"  alt="Correios" width="50" height="50">4014  </h2>  <hr> <ol> <li> <b style="color:blue;"> Produto..................... : 4014 </b> <br>prazo de Entrega (dias úteis): 17 <br>Entrega Domiciliar.......... : S <br>Entrega aos  sábados........ : N <br>Data máxima de Entrega ..... : 08/10/2020  </li> <hr>  
+    </ol>
+    <p style="background-color:gold;">
+            <img src="https://caciax.eastus2.cloudapp.azure.com/botat/images/balcaodigital2.png" 
+                alt="Correios" width="100" height="100">
+             
+             <sup>Cacia Assistente virtual</sup>
+        
+     </p>
+     <div id="webchat"></div>
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+    customData: {"language": "pt-BR"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    
+    socketUrl: "http://40.70.160.180:5005",
+    socketPath: "/socket.io/",
+    hideWhenNotConnected : true,
+      
+    title: "CACIA bot",
+    subtitle: "Assistente virtual",
+      
+    inputTextFieldHint: "Diga olá, para começar...",
+    connectingText: "Conectando....",
+    
+    profileAvatar: "http://40.70.160.180/botat/images/correiosLogo.jpeg",
+    openLauncherImage:  "http://40.70.160.180/botat/images/caciabt4.png",
+    
+    fullScreenMode: false,
+    showFullScreenButton: true,
+    docViewer: true,
+    showMessageDate: true,
+    
+    params: { images: { dims: { width: 300, height: 200, } }, storage: "local"  }
+              
+             
+             })
+    
+    
+    
+</script>
+     </body> 
+     </html>
+        

@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+      <title>Rastreamento de Objetos</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta name="description" content="Rastreamento de Objetos dos Correios">
+      <meta name="author" content="Bruno Martinez">
+      <style>
+            /*body {font-family:monospace; background-color:LightGray; border:2px solid Blue;}*/
+            h1   {color: black;}
+            h2   {color: blue;background-color:LightGray; text-align:center;}
+            p    {color:blue ;}
+            blockquote {background-color:LightGray; color:blue;}
+    
+           
+          
+          * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: LightGray;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: silver;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media  {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+          
+      </style>
+    
+        
+    </head>
+    
+    <body>  
+        <p style="background-color:gold;">
+             <img src="https://caciax.eastus2.cloudapp.azure.com/botat/images/correiosLogo.jpeg"
+            alt="Cacia Bot" width="50" height="50">
+             <sup> <b>CACIA -</b>  Central de atendimento Correios ( com IA)  </sup><br>
+        </p>   
+        <h1 style="text-align:center;" >
+        <img src="https://caciax.eastus2.cloudapp.azure.com/botat/images/rastreio_pacote.gif"
+            alt="Cacia Bot" width="50" height="50">
+            Rastreamento de objeto
+        </h1>
+   
+    <p> <sub> Protocolo: 
+    4431933b-5ee7-4f7f-bbd3-91f84df791c7<br> Contato: Anônimo  </sub></p> <h2>LB367643084SE</h2> <h2 style="color:green ;" > <img src="https://caciax.eastus2.cloudapp.azure.com/botat/images/fast-delivery.png"   alt="Correios" width="50" height="50">Objeto entregue ao destinatário  </h2>  <hr> <ol> <li> <b style="color:chocolate;"> Objeto entregue ao destinatário </b> <br>30/09/2020 
+18:23 
+ 
+ BRASILIA / DF <br>  </li> <hr>  <li> <b style="color:blue;"> Objeto saiu para entrega ao destinatário </b> <br>30/09/2020 
+07:47 
+ 
+ BRASILIA / DF <br>  </li> <hr>  <li> <b style="color:blue;"> Objeto encaminhado </b> <br>26/09/2020 
+10:36 
+BRASILIA / DF <br>de Unidade de Tratamento 
+em BRASILIA / DF 
+para Unidade de Distribuição 
+em BRASILIA / DF  </li> <hr>  <li> <b style="color:blue;"> Objeto encaminhado </b> <br>24/09/2020 
+09:02 
+CAJAMAR / SP <br>de Unidade de Tratamento 
+em CAJAMAR / SP 
+para Unidade de Distribuição 
+em BRASILIA / DF  </li> <hr>  <li> <b style="color:blue;"> Objeto encaminhado </b> <br>22/09/2020 
+21:55 
+CURITIBA / PR <br>de Unidade de Distribuição 
+em CURITIBA / PR 
+para Unidade de Tratamento 
+em CAJAMAR / SP  </li> <hr>  <li> <b style="color:blue;"> Fiscalização aduaneira finalizada </b> <br>22/09/2020 
+21:53 
+ 
+ CURITIBA / PR <br>  </li> <hr>  <li> <b style="color:blue;"> Objeto recebido pelos Correios do Brasil </b> <br>18/09/2020 
+08:24 
+ 
+ CURITIBA / PR <br>Informar nº do documento para a fiscalização e entrega do seu objeto. Clique aqui  </li> <hr>  <li> <b style="color:blue;"> Objeto recebido na unidade de exportação no país de origem </b> <br>10/09/2020 
+10:01 
+ 
+ SUECIA / <br>Informar nº do documento para a fiscalização e entrega do seu objeto. Clique aqui  </li> <hr>  <li> <b style="color:blue;"> Objeto postado </b> <br>10/09/2020 
+09:52 
+ 
+ SUECIA / <br>Informar nº do documento para a fiscalização e entrega do seu objeto. Clique aqui  </li> <hr>  
+    </ol>
+    <p style="background-color:gold;">
+            <img src="https://caciax.eastus2.cloudapp.azure.com/botat/images/balcaodigital2.png" 
+                alt="Correios" width="100" height="100">
+             
+             <sup>Cacia Assistente virtual</sup>
+        
+     </p>
+     <div id="webchat"></div>
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+    customData: {"language": "pt-BR"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    
+    socketUrl: "http://40.70.160.180:5005",
+    socketPath: "/socket.io/",
+    hideWhenNotConnected : true,
+      
+    title: "CACIA bot",
+    subtitle: "Assistente virtual",
+      
+    inputTextFieldHint: "Diga olá, para começar...",
+    connectingText: "Conectando....",
+    
+    profileAvatar: "http://40.70.160.180/botat/images/correiosLogo.jpeg",
+    openLauncherImage:  "http://40.70.160.180/botat/images/caciabt4.png",
+    
+    fullScreenMode: false,
+    showFullScreenButton: true,
+    docViewer: true,
+    showMessageDate: true,
+    
+    params: { images: { dims: { width: 300, height: 200, } }, storage: "local"  }
+              
+             
+             })
+    
+    
+    
+</script>
+     </body> 
+     </html>
+        
